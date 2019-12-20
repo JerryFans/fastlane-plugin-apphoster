@@ -37,7 +37,7 @@ module Fastlane
         
         response = RestClient::Request.execute(
           method: :post, 
-          url: url,
+          url: api_host,
           payload: {
               token: token,
               plat_id: plat_id,
