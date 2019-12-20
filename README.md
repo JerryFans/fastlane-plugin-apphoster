@@ -18,6 +18,12 @@ A simple plugin to upload your ipa file to [app-host](https://github.com/pluosi/
 
 ## Example
 
+if youur project use fastlane to build ipa file (just supported iOS file now) , and use app-host sever to upload ipa file to install app.
+
+```
+fastlane add_plugin apphoster
+```
+
 ```
 lane :beta do
   build_app(export_method: "ad-hoc")
