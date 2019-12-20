@@ -12,15 +12,24 @@ fastlane add_plugin apphoster
 
 ## About apphoster
 
-A simple plugin to upload your ipa file to AppHost Server in fastlane.
+A simple plugin to upload your ipa file to [app-host](https://github.com/pluosi/app-host) Server in fastlane.
 
 **Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
 
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
+```
+lane :beta do
+  build_app(export_method: "ad-hoc")
+  apphoster(api_host: "https://xxx.com, token: "your app-host token", plat_id: "your plat_id")
+end
+```
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+```
+fastlane beta
+```
+
+now you can auto build a ad-hoc ipa file and auto upload to app-host sever
 
 ## Run tests for this plugin
 
