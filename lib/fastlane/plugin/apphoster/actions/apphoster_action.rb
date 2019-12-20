@@ -50,7 +50,7 @@ module Fastlane
         if error.nil?
             ipa_id = json["id"]
             name = json["name"]
-            install_url = "#{ipa_host}#{ipa_id}"
+            install_url = "#{ipa_host}/#{ipa_id}"
             if ipa_host.empty?
               UI.success "#{name} upload success install ipa_id is #{ipa_id}"
             else
